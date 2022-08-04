@@ -7,7 +7,7 @@ async function getwheatherdata(city) {
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=cad7ec124945dcfff04e457e76760d90 `
   );
   var result = await weath_data.json();
-  //console.log(result);
+  console.log(result);
   let cityres = cityS.value;
   if (cityres.length == 0) {
     alert("Please enter a location");
@@ -20,6 +20,7 @@ async function getwheatherdata(city) {
     console.log(result.name);
     console.log(result.main.temp_min);
     console.log(result.main.temp_max);
+    console.log(result.wind.speed);
     weather.innerHTML = `
         <h2>${result.name}</h2>
         <h4 class="weather">${result.weather[0].main}</h4>
@@ -35,6 +36,14 @@ async function getwheatherdata(city) {
                 <h4 class="title">Max.Temp</h4>
                 <h4 class="temp">${Math.round(result.main.temp_max - 273.15)}&#176;C</h4>
             </div>
+        </div>
+        <div  class="wind">
+                <h4 class="title">Wind</h4>
+                <h4 class="windspeed">${result.wind.speed} Kmph</h4>
+        </div>
+        <div  class="wind-degree">
+                <h4 class="title">Wind Deg</h4>
+                <h4 class="winddegree">${result.wind.deg}&#176;C</h4>
         </div>
     `;
   }

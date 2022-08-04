@@ -1,5 +1,5 @@
- body{
-    background: #667db6; 
+body{
+    background: #0f0c29; 
 } 
 .wrapper {
     font-size: 16px;
@@ -16,10 +16,11 @@
     border: 1px solid white;
     background:transparent;
     margin: auto;
-    margin-top:50px;
+    margin-top:30px;
     justify-content: center;
     padding: 20px;
     border-radius: 10px;
+    color: white;
 }
 #input{
     margin-left: 3%;
@@ -73,6 +74,14 @@ img{
     margin-left: 100px;
 }
 #right{
+    margin-left: 300px;
+    margin-top: -75px;
+}
+.wind{
+    margin-top: 20px;
+    margin-left: 100px;
+}
+.wind-degree{
     margin-left: 300px;
     margin-top: -75px;
 }
